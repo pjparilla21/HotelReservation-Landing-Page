@@ -1,0 +1,50 @@
+.availability form .flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center; /* Align items neatly */
+}
+
+.availability form .flex .box {
+    flex: 1 1 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem; /* Add some spacing between elements */
+}
+
+.availability form .flex .box p {
+    font-size: 1.6rem; /* Slightly smaller and more modern */
+    font-weight: 500; /* Slightly bolder for emphasis */
+    color: var(--sub-color);
+    margin: 0; /* Remove any default margins */
+}
+
+.availability form .flex .box .input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.8rem;
+    background-color: var(--main-color);
+    color: var(--white);
+    border: 1px solid var(--sub-color); /* Subtle border for a modern feel */
+    border-radius: 0.5rem; /* Rounded corners for a clean look */
+    margin: 0.5rem 0; /* Consistent spacing */
+    transition: all 0.3s ease; /* Smooth transitions */
+}
+
+.availability form .flex .box .input:focus {
+    outline: none;
+    border-color: var(--white); /* Highlight on focus */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.6); /* Subtle glow effect */
+}
+
+.availability form .flex .box input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* Retain the inversion */
+    cursor: pointer; /* Change to pointer for a modern feel */
+    transition: all 0.3s ease; /* Smooth transition for hover */
+}
+
+.availability form .flex .box input[type="date"]:hover::-webkit-calendar-picker-indicator {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    opacity: 0.8; /* Add subtle transparency */
+}

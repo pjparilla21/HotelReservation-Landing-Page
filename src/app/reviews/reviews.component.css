@@ -1,0 +1,70 @@
+/* General box styling */
+.reviews .box {
+    position: relative; /* Enables positioning of the image */
+    padding: 5rem;
+    border-radius: 10px; /* Keeps the box styling consistent */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    transition: transform 0.3s ease-in-out;
+}
+
+.reviews .box:hover {
+    transform: translateY(-10px); /* Subtle lift effect on hover */
+}
+
+/* Image placeholder styling */
+.reviews .box .image {
+    margin-top:50px;
+    margin-bottom:200px;
+    width: 100px; /* Size of the circular image */
+    height: 100px;
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repetition of the image */
+    border-radius: 50%; /* Makes the placeholder round */
+    border: 5px solid #fff; /* White border around the image */
+    position: absolute;
+    top: -50px; /* Pulls the image above the box */
+    left: 50%;
+    transform: translateX(-50%); /* Centers the image horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds slight shadow for depth */
+}
+
+/* Image backgrounds for each box */
+.reviews .box.img-1 .image {
+    background-image: url('../images/pic-1.png'); /* Image for box 1 */
+}
+
+.reviews .box.img-2 .image {
+    background-image: url('../images/pic-2.png'); /* Image for box 2 */
+}
+
+.reviews .box.img-3 .image {
+    background-image: url('../images/pic-3.png'); /* Image for box 3 */
+}
+
+.reviews .box.img-4 .image {
+    background-image: url('../images/pic-4.png'); /* Image for box 4 */
+}
+
+.reviews .box.img-5 .image {
+    background-image: url('../images/pic-5.png'); /* Image for box 5 */
+}
+
+.reviews .box.img-6 .image {
+    background-image: url('../images/pic-6.png'); /* Image for box 6 */
+}
+
+/* Title styling */
+.reviews .box h3 {
+    margin-top: 5.5rem; /* Space below the image */
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+/* Text styling */
+.reviews .box p {
+    font-size: 1.4rem;
+    line-height: 2;
+    margin-top:1.5rem;
+}

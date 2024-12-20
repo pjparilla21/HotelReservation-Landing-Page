@@ -1,0 +1,45 @@
+/* Gallery image styling using background-image */
+.gallery .swiper-slide {
+    height: 40rem;
+    width: 60rem;
+    border-radius: .5rem;
+    margin-bottom: 4rem;
+    user-select: none;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Assign background images based on class selectors */
+.slide-1 {
+    background-image: url('../images/gallery-img-1.jpg');
+}
+
+.slide-2 {
+    background-image: url('../images/gallery-img-2.webp');
+}
+
+.slide-3 {
+    background-image: url('../images/gallery-img-3.webp');
+}
+
+.slide-4 {
+    background-image: url('../images/gallery-img-4.webp');
+}
+
+.slide-5 {
+    background-image: url('../images/gallery-img-5.webp');
+}
+
+.slide-6 {
+    background-image: url('../images/gallery-img-6.webp');
+}
+
+/* Pagination styles */
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 0;
+}
+
+::ng-deep .swiper-pagination-bullet {
+    background-color: white;
+}
+

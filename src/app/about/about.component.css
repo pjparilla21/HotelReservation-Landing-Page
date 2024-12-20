@@ -1,0 +1,143 @@
+.about .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.timeline {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline-line {
+    width: 2px;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    margin-left: -1px;
+    z-index: -1;
+}
+
+.timeline-item {
+    position: relative;
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.timeline-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hide the timeline item when hovered */
+.timeline-item:hover {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.timeline-marker {
+    width: 2rem;
+    height: 2rem;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.timeline-content {
+    background-color: #f4f4f4;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    text-align: left;
+    max-width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+.timeline-item:hover .timeline-content {
+    background-color: #e3f2fd;
+    max-height: 300px;
+}
+
+/* Adjust image width and content width */
+.about .row .image {
+    flex: 1 1 33%; /* Ensure image takes 33% of the row width */
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+
+.about .row .content {
+    flex: 1 1 33%; /* Ensure content takes 33% of the row width */
+    text-align: left;
+}
+
+.about .row:nth-child(1) .image {
+    background-image: url('../images/about-img-1.jpg');
+}
+
+.about .row:nth-child(2) .image {
+    background-image: url('../images/about-img-2.jpg');
+}
+
+.about .row:nth-child(3) .image {
+    background-image: url('../images/about-img-3.jpg');
+}
+
+.about .row .content h3 {
+    font-size: 3rem;
+    color: var(--sub-color);
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+
+.about .row .content p {
+    line-height: 2;
+    padding: 1rem 0;
+    font-size: 1.7rem;
+    color: var(--sub-color);
+}
+
+.about .row.revers {
+    flex-flow: row-reverse;
+    margin: 3rem 0;
+    flex-wrap: wrap;
+}
+
+/* Timeline entry fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scroll animation trigger */
+.about .row.show .timeline-item {
+    animation: fadeIn 0.5s ease-out forwards;
+}

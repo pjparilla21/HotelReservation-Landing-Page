@@ -1,0 +1,136 @@
+/* Contact Section Layout */
+.contact .row {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ensures the content is spaced evenly */
+    padding: 3rem 1rem; /* Added padding for better spacing */
+}
+
+/* Contact Form Styling */
+.contact .row form {
+    flex: 1 1 40rem;
+    border: var(--border);
+    border-radius: 1rem; /* Increased radius for modern look */
+    padding: 2.5rem; /* Increased padding for spacious feel */
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition on hover */
+}
+
+.contact .row form:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* FAQ Section Styling */
+.contact .row .faq {
+    flex: 1 1 40rem;
+}
+
+/* Form Heading Styling */
+.contact .row form h3 {
+    margin-bottom: 1.5rem; /* Increased margin for cleaner spacing */
+    border-radius: .5rem;
+    padding: 1.2rem;
+    color: var(--main-color);
+    background-color: var(--sub-color);
+    font-size: 2.4rem; /* Slightly larger font for emphasis */
+    text-transform: capitalize;
+    font-weight: 500; /* Modern font weight */
+    letter-spacing: 1px; /* Subtle letter spacing */
+}
+
+/* Input and Textarea Fields */
+.contact .row form .box {
+    padding: 1.2rem 0; /* Slightly more padding for spacious feel */
+    margin: 1rem 0;
+    border-bottom: var(--border);
+    font-size: 1.8rem;
+    color: var(--sub-color);
+    background: var(--main-color);
+    width: 100%;
+    border-radius: .5rem; /* Rounded corners for input fields */
+    transition: border 0.3s ease; /* Smooth transition for focus effect */
+}
+
+.contact .row form .box::placeholder {
+    color: rgba(220, 198, 156, 0.6);
+}
+
+/* Textarea Specific Styling */
+.contact .row form textarea {
+    height: 15rem;
+    resize: none;
+    border-radius: .5rem; /* Rounded corners for the textarea */
+    border: var(--border);
+    padding: 1.5rem; /* Added padding for better user experience */
+    transition: border-color 0.3s ease; /* Smooth transition for focus */
+}
+
+.contact .row form .box:focus,
+.contact .row form textarea:focus {
+    border-color: var(--main-color); /* Focus effect */
+    outline: none; /* Removes default focus outline */
+}
+
+/* FAQ Title Styling */
+.contact .row .faq .title {
+    padding-bottom: .5rem;
+    font-size: 2.5rem;
+    color: var(--sub-color);
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 500; /* Modern font weight */
+}
+
+/* FAQ Box Styling */
+.contact .row .faq .box {
+    border-radius: .5rem;
+    border: var(--border);
+    margin-top: 2rem;
+    overflow: hidden; /* Ensures content doesn't spill outside */
+}
+
+.contact .row .faq .box h3 {
+    background-color: var(--sub-color);
+    color: var(--main-color);
+    padding: 1.5rem;
+    font-size: 2rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-weight: 500; /* Modern font weight */
+    transition: background-color 0.3s ease; /* Smooth background transition on hover */
+}
+
+.contact .row .faq .box h3:hover {
+    background-color: var(--main-color); /* Hover effect on question */
+    color: var(--sub-color);
+}
+
+/* FAQ Paragraph Styling */
+.contact .row .faq .box p {
+    padding: 1.5rem 2rem;
+    line-height: 2;
+    font-size: 1.6rem;
+    color: var(--sub-color);
+    display: none;
+    transition: max-height 0.3s ease-in-out; /* Smooth opening effect */
+    max-height: 0;
+    overflow: hidden;
+}
+
+/* FAQ Box Active State */
+.contact .row .faq .box.active p {
+    display: inline-block;
+    max-height: 1000px; /* Ensures the paragraph is visible when active */
+}
+
+/* Accessibility Focus */
+.contact .row form .box:focus,
+.contact .row form textarea:focus,
+.contact .row .faq .box h3:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3); /* Focus outline for better accessibility */
+}
